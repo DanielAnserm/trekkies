@@ -1,0 +1,64 @@
+{
+    "traits": {
+        "Aisance sociale": [
+            {
+                "name": "Sociable naturel",
+                "description": "À l'aise dans les interactions sociales",
+                "conditions": { "minStats": { "character": 2 } },
+                "weight": 8
+            },
+            {
+                "name": "Timide mais ouvert",
+                "description": "Réservé mais prêt à participer",
+                "conditions": { "minStats": { "character": 1 }, "maxStats": { "character": 2 } },
+                "weight": 6
+            },
+            {
+                "name": "Introverti",
+                "description": "Préfère observer et écouter",
+                "conditions": { "maxStats": { "character": 1 } },
+                "weight": 4
+            }
+        ],
+        "Compréhension culturelle": [
+            {
+                "name": "Fin observateur",
+                "description": "Comprend rapidement les codes",
+                "conditions": { "minStats": { "context": 2 } },
+                "weight": 8
+            },
+            {
+                "name": "En apprentissage",
+                "description": "Découvre les usages de l'entreprise",
+                "conditions": { "minStats": { "context": 1 } },
+                "weight": 6
+            },
+            {
+                "name": "Débutant",
+                "description": "Tout est nouveau",
+                "conditions": { "maxStats": { "context": 1 } },
+                "weight": 4
+            }
+        ],
+        "Gestion des situations délicates": [
+            {
+                "name": "Diplomatique",
+                "description": "Sait naviguer avec tact",
+                "conditions": { "minStats": { "skills": 2 } },
+                "weight": 8
+            },
+            {
+                "name": "Prudent",
+                "description": "Évite les erreurs majeures",
+                "conditions": { "minStats": { "skills": 1 } },
+                "weight": 6
+            },
+            {
+                "name": "Direct",
+                "description": "Dit ce qu'il pense",
+                "conditions": { "maxStats": { "skills": 1 } },
+                "weight": 4
+            }
+        ]
+    }
+}

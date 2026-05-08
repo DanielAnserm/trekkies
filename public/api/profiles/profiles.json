@@ -1,0 +1,44 @@
+{
+    "profiles": [
+        {
+            "id": "migrant",
+            "name": "Personne migrante",
+            "weight": 50,
+            "initialStats": {
+                "context": 1,
+                "character": 0,
+                "skills": 0,
+                "experience": 0
+            },
+            "randomDistribution": {
+                "remaining": 3,
+                "stats": ["character", "skills"]
+            },
+            "description": {
+                "title": "Ton profil : Personne migrante",
+                "content": "Tu as rejoint la Suisse depuis peu pour commencer une nouvelle étape de ta vie.\n\nTout est nouveau : la langue, les habitudes, les codes culturels… Parfois, tu as l’impression de ne pas tout comprendre, ou de ne pas réussir à t'exprimer.\n\nCes différences peuvent rendre ton intégration plus difficile — à l’école, en stage ou dans la vie quotidienne.\n\nMais elles sont aussi une richesse : ton parcours, ton courage et ta capacité d’adaptation font partie de ta force.\n\nÀ travers cette aventure, tu apprendras à transformer ces défis en leviers pour atteindre ton Sommet.",
+                "continueButton": "Commencer l'aventure"
+            }
+        },
+        {
+            "id": "beneficiaire_CSR",
+            "name": "Bénéficiaire CSR",
+            "weight": 50,
+            "initialStats": {
+                "character": 1,
+                "context": 0,
+                "skills": 0,
+                "experience": 0
+            },
+            "randomDistribution": {
+                "remaining": 3,
+                "stats": ["context", "skills"]
+            },
+            "description": {
+                "title": "Ton profil : Bénéficiaire CSR",
+                "content": "Profitant de l’aide sociale cantonale, tu avances dans la vie avec déjà beaucoup à porter.\n\nDes défis familiaux, personnels ou émotionnels rendent ton parcours professionnel plus complexe que celui de beaucoup d’autres.\n\nIl t’arrive de te demander s’il faut d’abord prendre le temps de régler ce qui te pèse, ou continuer à avancer vers tes objectifs.\n\nCe tiraillement est réel, mais il t’aidera à trouver ton équilibre, à te relever et à progresser malgré les obstacles.\n\nTon chemin sera peut-être moins linéaire, mais il te rendra plus solide, plus lucide, et cela renforcera ta détermination à atteindre ton Sommet.",
+                "continueButton": "Poursuivre l'aventure"
+            }
+        }
+    ]
+}

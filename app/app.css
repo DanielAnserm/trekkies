@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@import "tailwindcss";
+@plugin './hero.ts';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-roboto: "Roboto", sans-serif;
+    --font-karla: "Karla", sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    white-space: pre-line;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+* {
+    font-family: var(--font-roboto);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    font-family: var(--font-karla);
+}
+
+/* #root,
+#__next {
+    isolation: isolate;
+} */
+#qr-reader > div{
+    display: none !important;
+     
+}
+#qr-shaded-region {
+    display: none;
+}

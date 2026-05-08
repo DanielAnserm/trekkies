@@ -1,0 +1,380 @@
+{
+    "home": {
+        "title": "Bienvenue {{pseudo}} !",
+        "description": "Scanne un code QR pour continuer ton aventure et avancer dans ta quête.",
+        "scanButton": "Scanner un QR Code",
+        "changePseudoButton": "Changer le pseudo",
+        "customPseudoButton": "Personnaliser le pseudo",
+        "continuePartyButton": "Continuer la partie",
+        "or": "OU",
+        "playerProfile": "Ton profil :",
+        "playerCard": {
+            "totalScore": "Score total: {{totalScore}}",
+            "completedScenarios": "Scénarios terminés",
+            "stats": {
+                "character": "Caractère",
+                "skills": "Compétences",
+                "context": "Contexte",
+                "experience": "Expérience"
+            }
+        },
+        "completedScenarios": {
+            "title": "Scénarios complétés",
+            "description": "Vous avez terminé {{count}} scénario(s)"
+        },
+        "trophy": {
+            "footer": "Besoin d'aide? Clique sur chaque badge pour avoir des détails"
+        }
+    },
+    "pseudo": {
+        "form": {
+            "title": "Mettre à jour le pseudo",
+            "username": {
+                "label": "Ton pseudo (facultatif)",
+                "required": "Le pseudo est requis"
+            },
+            "submit": {
+                "label": "Mettre à jour le pseudo"
+            },
+            "cancel": {
+                "label": "Annuler"
+            }
+        }
+    },
+    "login": {
+        "title": "Bienvenue dans le jeu!",
+        "description": "Tu vas incarner un trekki, suivre son parcours et tenter d'atteindre son sommet. \n Tu feras face à différentes situations où chaque choix peut avoir des conséquences importantes.\n Entre maintenant ton pseudo pour commencer l'aventure.",
+        "form": {
+            "username": {
+                "label": "Ton pseudo (facultatif)",
+                "required": "Le pseudo est requis"
+            },
+            "submit": {
+                "label": "Commencer l'aventure"
+            }
+        }
+    },
+    "firstLogin": {
+        "title": "L'aventure commence ici !",
+        "description": "Tu vas te glisser dans la peau d'un·e jeune en quête de son sommet. Ici, tu ne joueras pas toi-même, mais un·e Trekki : un jeune qui avancera vers son avenir professionnel. Ton rôle : le guider à travers ses choix pour l'aider à atteindre son Sommet. Chaque décision comptera. Entre ton pseudo et prépare-toi à commencer l'ascension !",
+        "pseudoPlaceholder": "Entre ton pseudo..."
+    },
+    "navbar": {
+        "aria": {
+            "userDropdown": "Menu utilisateur"
+        },
+        "changePseudo": "Changer de pseudonyme",
+        "devActions": "Actions développeur",
+        "resetGame": "Réinitialiser la sauvegarde (Dev only)",
+        "resetGameDescription": "Réinitialise complètement la progression du jeu",
+        "resetConfirm": "Êtes-vous sûr de vouloir réinitialiser complètement le jeu ? Toute progression sera perdue.",
+        "tooltips": {
+            "home": "Accueil",
+            "leaderboard": "Classement"
+        }
+    },
+    "start": {
+        "title": "Bienvenue {{pseudo}} !",
+        "description": "Tu es sur le point de commencer une aventure passionnante. Prépare-toi à explorer, apprendre et grandir.\n\nUn profil de joueur va t'être attribué.",
+        "ready": "Es-tu prêt à commencer ?",
+        "button": {
+            "continue": {
+                "label": "Continuer"
+            },
+            "changePseudo": {
+                "label": "Changer le pseudo"
+            }
+        }
+    },
+    "errorStepCard": {
+        "title": "Attention",
+        "description": "Tu vas vite en besogne, ne brûle pas les étapes. Va voir un coach si tu as besoin d'être aiguillé."
+    },
+    "endCard": {
+        "newStatistics": "Vos nouvelles statistiques",
+        "newObjective": "VOUS AVEZ UN NOUVEL OBJECTIF\u00a0!",
+        "newTrophy": "VOUS AVEZ DÉBLOQUÉ UN NOUVEAU TROPHÉE\u00a0!"
+    },
+    "profile": {
+        "title": "👤 {{pseudo}}",
+        "interests_one": "💡 Centre d'intérêt",
+        "interests_other": "💡 Centres d'intérêt",
+        "traits_one": "✨ Trait de Personnalité",
+        "traits_other": "✨ Traits de Personnalité",
+        "statisticsTitle": "📊 Statistiques du Joueur",
+        "statistics": {
+            "character": "Caractère",
+            "skills": "Compétences",
+            "context": "Contexte",
+            "experience": "Expérience"
+        },
+        "goal": {
+            "title": "🎯 Objectif",
+            "none": "Aucun objectif détecté"
+        },
+        "interests": {
+            "none": "Aucun intérêt spécifique détecté"
+        },
+        "traits": {
+            "none": "Aucun trait spécifique détecté"
+        },
+        "trophy": {
+            "title": "🏆 Progression",
+            "trophyUnlock": "({{unlock}}/{{total}})"
+        }
+    },
+    "scenario": {
+        "conflict": {
+            "title": "Scénario en cours",
+            "description": "Vous avez déjà une partie en cours. Que souhaitez-vous faire ?",
+            "current": "Scénario actuel",
+            "new": "Nouveau scénario",
+            "continue": "Continuer l'actuel",
+            "startNew": "Commencer le nouveau",
+            "cancel": "Annuler"
+        },
+        "unknownScenario": "Scénario inconnu",
+        "noScenario": {
+            "title": "Tous les scénarios complétés !",
+            "description": "Félicitations ! Vous avez terminé tous les scénarios disponibles.",
+            "descriptionWithCategory": "Félicitations ! Vous avez terminé tous les scénarios disponibles dans la catégorie « {{category}} ».",
+            "suggestions": "Pour continuer votre aventure :\n\n- Scannez un **QR code** d'une autre catégorie\n- Améliorez vos **statistiques** dans d'autres scénarios\n- Revenez plus tard pour de **nouveaux scénarios**",
+            "backHome": "Retour à l'accueil",
+            "categories": {
+                "orientation": {
+                    "title": "Orientation déjà faite !",
+                    "description": "Félicitations ! Vous avez terminé votre orientation.",
+                    "suggestion": "Pour continuer votre aventure :\n\n- Scanne un **code QR rouge** pour valider ton sommet\n- Ou va voir un **coach Jobtrek** si tu as besoin d'aide"
+                },
+                "validation": {
+                    "title": "Validation déjà faite !",
+                    "description": "Félicitations ! Vous avez déjà validé votre sommet.",
+                    "suggestion": "Pour continuer votre aventure :\n\n- Scanne un **code QR vert** pour renforcer tes statistiques\n- Ou va voir un **coach Jobtrek** si tu as besoin d'aide"
+                },
+                "renforcement": {
+                    "title": "Tous les scénarios complétés !",
+                    "description": "Félicitations ! Vous avez terminé tous les scénarios de renforcement disponibles.",
+                    "suggestion": "Pour continuer votre aventure :\n\n- Va auprès d'un **collaborateur Jobtrek** pour postuler à un job et terminer ta **sélection**\n- Ou va voir un **coach Jobtrek** si tu as besoin d'aide"
+                },
+                "selection": {
+                    "title": "Sélection achevée !",
+                    "description": "Bravo ! Tu as complété les scénarios de sélection.",
+                    "suggestion": "Découvre de nouvelles aventures dans les autres catégories disponibles."
+                },
+                "help_postulation": {
+                    "title": "Aide à la postulation terminée !",
+                    "description": "Super ! Tu maîtrises maintenant les bases de la postulation.",
+                    "suggestion": "Retourne explorer d'autres scénarios pour continuer ton parcours."
+                },
+                "help_sommet": {
+                    "title": "Aide au sommet complétée !",
+                    "description": "Excellent ! Tu as toutes les clés pour atteindre ton sommet.",
+                    "suggestion": "Continue ton aventure dans les autres catégories disponibles."
+                },
+                "help_validation": {
+                    "title": "Aide à la validation terminée !",
+                    "description": "Parfait ! Tu as acquis les connaissances nécessaires pour la validation.",
+                    "suggestion": "Retourne au menu principal pour continuer ton parcours."
+                }
+            }
+        },
+        "prerequisites": {
+            "title": "Conditions non remplies",
+            "description": "Tu ne peux pas encore accéder à cette catégorie. Certaines conditions doivent être remplies.",
+            "backHome": "Retour à l'accueil",
+            "categories": {
+                "orientation": {
+                    "title": "Attention",
+                    "description": "Tu vas vite en besogne, ne brûle pas les étapes. Termine d'abord ton **orientation** (scanne le code QR noir).",
+                    "suggestion": "Pour continuer :\n\n- Va voir un **coach Jobtrek** si tu as besoin d'être aiguillé"
+                },
+                "validation": {
+                    "title": "Attention",
+                    "description": "Tu vas un peu trop vite : avance étape par étape. **Valide d'abord ton sommet** (scanne le code QR rouge).",
+                    "suggestion": "Pour continuer :\n\n- Si tu as besoin d'aide, parle à un **coach Jobtrek**"
+                },
+                "renforcement": {
+                    "title": "Attention",
+                    "description": "Ralentis et ne grille pas les étapes. Essaie d'atteindre **7 points d'expérience** avec les stages de renforcement avant de postuler (scanne le code QR vert).",
+                    "suggestion": "Pour continuer :\n\n- Si tu as besoin de conseils, va voir un **coach**"
+                },
+                "selection": {
+                    "title": "Accès verrouillé",
+                    "description": "La Sélection nécessite d'avoir franchi des étapes importantes de ton parcours.",
+                    "suggestion": "Continue ton aventure et reviens quand tu auras progressé davantage."
+                },
+                "help_postulation": {
+                    "title": "Aide non disponible pour le moment",
+                    "description": "Cette aide sera accessible quand tu en auras besoin dans ton parcours.",
+                    "suggestion": "Continue ton aventure et cette ressource se débloquera naturellement."
+                },
+                "help_sommet": {
+                    "title": "Aide au sommet non accessible",
+                    "description": "Tu pourras accéder à cette aide plus tard dans ton parcours.",
+                    "suggestion": "Poursuis ton aventure, cette ressource sera disponible au moment opportun."
+                },
+                "help_validation": {
+                    "title": "Aide à la validation non disponible",
+                    "description": "Cette aide sera accessible quand tu seras à l'étape de validation.",
+                    "suggestion": "Continue ton parcours et reviens quand tu auras besoin de cette ressource."
+                }
+            }
+        }
+    },
+    "qr": {
+        "scanner": {
+            "title": "Scanner QR Code",
+            "description": "Positionnez le code QR devant votre caméra.",
+            "loadingCamera": "Chargement de la caméra",
+            "cameraPermissionDenied": "La permission d'accès à la caméra a été refusée.",
+            "cameraAccessError": "Impossible d'accéder aux caméras",
+            "noCamera": "Aucune caméra sélectionnée",
+            "errorStarting": "Erreur lors du démarrage de la caméra",
+            "scanning": "Recherche de code QR",
+            "detected": "Code QR détecté!",
+            "invalid": "Code QR invalide!",
+            "close": "Fermer",
+            "manualEntry": "Saisie manuelle"
+        },
+        "manual": {
+            "title": "Saisie manuelle du QR",
+            "label": "Entrez l'ID de catégorie du QR code.",
+            "placeholder": "ID de catégorie (ex: orientation, validation...)",
+            "validate": "Valider le code",
+            "close": "Fermer"
+        }
+    },
+    "leaderboard": {
+        "title": "Classement Global",
+        "rank": "Rang",
+        "userRank": "Votre rang",
+        "stats": {
+            "players": "Joueurs",
+            "yourRank": "Votre rang",
+            "yourPoints": "Vos points",
+            "scenarios": "Scénarios"
+        },
+        "sort": {
+            "score": "Score",
+            "character": "Caractère",
+            "skills": "Compétences",
+            "context": "Contexte",
+            "experience": "Expérience",
+            "totalScenarios": "Scénarios"
+        },
+        "playerCard": {
+            "totalScore": "Score total",
+            "completedScenarios": "Scénarios terminés",
+            "isYou": "C'est vous!",
+            "character": "Caractère",
+            "skills": "Compétences",
+            "context": "Contexte",
+            "experience": "Expérience"
+        },
+        "noPlayers": "Aucun joueur dans le classement pour le moment",
+        "actions": {
+            "continueGame": "Continuer la partie",
+            "backHome": "Retour à l'accueil",
+            "refresh": "Actualiser"
+        },
+        "errors": {
+            "loadError": "Impossible de charger le classement",
+            "retry": "Réessayer"
+        }
+    },
+    "common": {
+        "loading": "Chargement...",
+        "error": "Erreur",
+        "retry": "Réessayer",
+        "cancel": "Annuler",
+        "save": "Enregistrer",
+        "close": "Fermer",
+        "back": "Retour",
+        "anonymousPlayer": "Joueur Anonyme",
+        "statistics": "Statistiques",
+        "backHome": "Retour à l'accueil"
+    },
+    "trophy": {
+        "orientation": {
+            "title": "Orientation",
+            "popover": {
+                "title": "Orientation",
+                "description": "*Découvre qui tu es pour trouver ton sommet. Cette étape t’aide à identifier tes forces, tes envies, tes ambitions mais également tes limites afin de définir l’objectif professionnel qui te correspond.*\n\nScanne un QR code noir pour passer ton orientation et découvrir ton Sommet."
+            }
+        },
+        "validation": {
+            "title": "Validation",
+            "popover": {
+                "title": "Stage de validation",
+                "description": "*Éprouve ton Sommet sur le terrain. Ces expériences concrètes te permettent d’explorer le monde du travail, de confirmer ce qui te convient et de grandir. Autant d’expériences concrètes comme outils d’apprentissage.*\n\nScanne un QR code rouge pour vivre un stage de validation. Si tu réussis, tu passes à l’étape suivante ; sinon, réessaie un autre stage."
+            }
+        },
+        "postulation": {
+            "title": "Renforcement",
+            "popover": {
+                "title": "Stages de perfectionnement",
+                "description": "*Renforce-toi avant de postuler. Chaque stage développe ton caractère et tes compétences : surmonte les obstacles pour te rapprocher de ton Sommet.* \n\n\nScanne un QR code vert autant de fois que nécessaire pour faire des stages. Une fois que tu auras cumulé **7 points d’expérience** ou plus, tu pourras postuler pour ton Sommet."
+            }
+        },
+        "sommet": {
+            "title": "Sommet",
+            "popover": {
+                "title": "Sommet",
+                "description": "*Le sommet de ton parcours ! Tu concrétises ton objectif et entres dans l’aventure professionnelle qui commence réellement ici.*\n\nScanne le QR code de fin pour vivre l’expérience finale. Félicitations — tu as atteint ton sommet !"
+            }
+        }
+    },
+    "caracteristiques_joueur": {
+        "title": "Les 4 caractéristiques du joueur",
+        "description": "Chaque Trekkie possède quatre caractéristiques principales. Elles influencent ses choix, ses réussites et sa progression vers le Summit.",
+        "characteristics": {
+            "character": {
+                "name": "Caractère",
+                "description": "Ce qui te définit comme personne — ta façon d'être, tes réactions, ta capacité à t'adapter aux situations."
+            },
+            "skills": {
+                "name": "Compétences",
+                "description": "Tes aptitudes, acquises au fil de la vie — sociales, émotionnelles ou techniques. Tu continues à les développer à chaque étape."
+            },
+            "context": {
+                "name": "Contexte",
+                "description": "Tout ce qui t'entoure — ta famille, tes amis, ton environnement, ta situation. Ce n'est pas toujours sous ton contrôle, mais tu peux agir dessus."
+            },
+            "experience": {
+                "name": "Expérience",
+                "description": "Ce que tu apprends sur le terrain, durant tes stages et ton parcours professionnel. C'est ton bagage pour progresser et atteindre ton Summit."
+            }
+        },
+        "continueButton": "Fermer"
+    },
+    "endGame": {
+        "title": "Bravo, tu as atteint ton Sommet !",
+        "startDescription": "Félicitations, tu as guidé ton Trekki jusqu'au bout! \n\n",
+        "endDescription": "Laisse-nous ton addresse mail si tu le souhaites \n\nEt si tu veux continuer l'expérience, plonge-toi dans l'univers des histoires de Trekkis",
+        "form": {
+            "email": {
+                "label": "Entre ton email"
+            },
+            "buttonSubmit": {
+                "label": "Poursuivre l’expérience"
+            }
+        },
+        "buttonLeaderboard": {
+            "label": "Voir le classement"
+        },
+        "redirectionCountdown_zero": "Redirection en cours",
+        "redirectionCountdown_one": "Redirection dans {{count}} seconde",
+        "redirectionCountdown_other": "Redirection dans {{count}} secondes"
+    },
+    "badge_postulation": {
+        "title": "Bravo, tu as franchi une nouvelle étape !",
+        "description": "Félicitations, tu as gagné le badge **Postulation** !\n\nTon parcours t'a permis d'acquérir assez d'expérience et de confiance pour passer à la prochaine étape.\n\nIl est maintenant temps pour toi de viser plus haut et de te rapprocher de ton Sommet.\n\nDes places sont encore disponibles : rends-toi auprès des collaborateurs de **Jobtrek** pour passer ton entretien et décrocher une place pour un **stage de sélection**.\n\nTu es tout près du sommet !\n\n **Mais tu peux également continuer à faire des stages de renforcement pour renforcer tes stats!**",
+        "continueButton": "Poursuivre l'aventure",
+        "goToJobtrekButtom": "Aller vers Jobtrek",
+        "trophyUnlock": "VOUS AVEZ DÉBLOQUÉ UN NOUVEAU TROPHÉE\u00a0!"
+    },
+    "resetSave": {
+        "title": "Réinitialisation de la sauvegarde",
+        "warning": "Données locales supprimées. Les données Firebase n'ont pas pu être supprimées (authentification requise)."
+    }
+}

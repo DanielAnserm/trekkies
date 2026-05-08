@@ -1,0 +1,490 @@
+{
+    "categories": {
+        "orientation": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "orientation_quiz_migrant",
+                    "version": "1.0",
+                    "condition": "$profileId == migrant"
+                },
+                {
+                    "key": "orientation_quiz_csr",
+                    "version": "1.0",
+                    "condition": "$profileId == beneficiaire_CSR"
+                }
+            ]
+        },
+        "validation": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": ["orientation"]
+            },
+            "scenarios": [
+                {
+                    "key": "premierStage_Migrant",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _validationStep == 1 && $profileId == migrant"
+                },
+                {
+                    "key": "reorientation_quiz_migrant",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _validationStep == 5 && $profileId == migrant && _reorientationDone !=1"
+                },
+                {
+                    "key": "reorientation_quiz_csr",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _validationStep == 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "bonbon",
+                    "version": "1.0",
+                    "condition": "(_validationUnlock < 1 && _validationStep == 4 && $profileId == beneficiaire_CSR && _reorientationDone ==1) || (_validationUnlock < 1 && _validationStep == 5 && $profileId == migrant && _reorientationDone ==1)"
+                },
+                {
+                    "key": "validation_peintre_taches_ingrates",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Peintre && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_peintre_ambiance",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Peintre && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_peintre_rebarbative",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Peintre && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_peintre_emotionnelle",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Peintre && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_logisticien_ambiance",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_de_Logisticien && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_logisticien_taches",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_de_Logisticien && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_logisticien_progression",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_de_Logisticien && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_asa_mission_dentier",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == AFP_Aide_en_soins_et_accompagnement && _validationStep < 5 && _validationStep > 1"
+                },
+                {
+                    "key": "validation_ase_ems",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Assistant_socio-educatif && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_ase_handicap",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Assistant_socio-educatif && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_ase_enfants",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Assistant_socio-educatif && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_assc_ems",
+                    "version": "1.0",
+                    "condition": "(_validationUnlock < 1 && _goal == CFC_Assistant_en_soins_et_sante_communautaire && _validationStep < 5 && _validationStep > 1 && $profileId == migrant) || (_validationUnlock < 1 && _goal == CFC_Assistant_en_soins_et_sante_communautaire && _validationStep < 4 && $profileId == beneficiaire_CSR)"
+                },
+                {
+                    "key": "validation_assc_hopital",
+                    "version": "1.0",
+                    "condition": "(_validationUnlock < 1 && _goal == CFC_Assistant_en_soins_et_sante_communautaire && _validationStep < 5 && _validationStep > 1 && $profileId == migrant) || (_validationUnlock < 1 && _goal == CFC_Assistant_en_soins_et_sante_communautaire && _validationStep < 4 && $profileId == beneficiaire_CSR)"
+                },
+                {
+                    "key": "validation_assc_domicile",
+                    "version": "1.0",
+                    "condition": "(_validationUnlock < 1 && _goal == CFC_Assistant_en_soins_et_sante_communautaire && _validationStep < 5 && _validationStep > 1 && $profileId == migrant) || (_validationUnlock < 1 && _goal == CFC_Assistant_en_soins_et_sante_communautaire && _validationStep < 4 && $profileId == beneficiaire_CSR)"
+                },
+                {
+                    "key": "validation_assc_fatigue_absence",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _validationStep < 4 && _goal == CFC_Informaticien"
+                },
+                {
+                    "key": "validation_informaticien_ambiance",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Informaticien && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_informaticien_taches",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Informaticien && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_informaticien_progression",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Informaticien && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_informaticien_complexite",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Informaticien && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_commerce_ambiance",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Employee_de_commerce && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_commerce_taches",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Employee_de_commerce && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                },
+                {
+                    "key": "validation_commerce_progression",
+                    "version": "1.0",
+                    "condition": "_validationUnlock < 1 && _goal == CFC_Employee_de_commerce && _validationStep < 4 && $profileId == beneficiaire_CSR"
+                }
+            ]
+        },
+        "renforcement": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": ["orientation", "validation"]
+            },
+            "scenarios": [
+                {
+                    "key": "renforcement_migrant_pause_vin",
+                    "version": "1.0",
+                    "condition": "$profileId == migrant"
+                },
+                {
+                    "key": "renforcement_migrant_remarque_raciste",
+                    "version": "1.0",
+                    "condition": "$profileId == migrant"
+                },
+                {
+                    "key": "renforcement_all_stage_silencieux",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_all_les_codes_silencieux",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_all_la_rencontre_atypique",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_all_lire_entre_les_lignes",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_all_le_message_pro",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_all_imitation_maitrisee",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_all_quand_le_doute_sinstalle",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_csr_conflit_matinal",
+                    "version": "1.0",
+                    "condition": "$profileId == beneficiaire_CSR && context < 3"
+                },
+                {
+                    "key": "renforcement_csr_pas_argent_train",
+                    "version": "1.0",
+                    "condition": "$profileId == beneficiaire_CSR && context == 3"
+                },
+                {
+                    "key": "perfectionnement_all_renseignement_entreprise",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_tenue_stage",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant && _goal == CFC_de_Logisticien) || ($profileId == migrant && _goal == CFC_Assistant_en_soins_et_sante_communautaire) || ($profileId == beneficiaire_CSR && context > 3 && _goal == CFC_Employee_de_commerce) || ($profileId == beneficiaire_CSR && context > 3 && _goal == CFC_Assistant_en_soins_et_sante_communautaire)"
+                },
+                {
+                    "key": "perfectionnement_suivi_coach",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "perfectionnement_nouveau_stage_meme_entreprise",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "EncorePlusFort_renforcement",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                },
+                {
+                    "key": "renforcement_migrant_oser_initiative",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant && _goal == CFC_de_Logisticien) || ($profileId == migrant && _goal == CFC_Peintre)"
+                },
+                {
+                    "key": "renforcement_gestion_emotionnelle_trop_plein",
+                    "version": "1.0",
+                    "condition": "($profileId == migrant) || ($profileId == beneficiaire_CSR && context > 3)"
+                }
+            ]
+        },
+        "selection": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": ["orientation", "validation", "postulation"]
+            },
+            "scenarios": [
+                {
+                    "key": "selection_csr_ase_assez_forte",
+                    "version": "1.0",
+                    "condition": "($profileId == beneficiaire_CSR && _goal == CFC_Assistant_socio_educatif && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_ec1_helvetia",
+                    "version": "1.0",
+                    "condition": "($profileId == beneficiaire_CSR && _goal == CFC_Employee_de_commerce && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_employe_de_commerce_2",
+                    "version": "1.0",
+                    "condition": "($profileId == beneficiaire_CSR && _goal == CFC_Employee_de_commerce && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_neutre_1",
+                    "version": "1.0",
+                    "condition": "_selectionTry != 3"
+                },
+                {
+                    "key": "selection_neutre_2",
+                    "version": "1.0",
+                    "condition": "_selectionTry != 3"
+                },
+                {
+                    "key": "selection_neutre_3",
+                    "version": "1.0",
+                    "condition": "_selectionTry != 3"
+                },
+                {
+                    "key": "selection_derniere_etape_bonbon",
+                    "version": "1.0",
+                    "condition": "_selectionTry >= 3"
+                },
+                {
+                    "key": "selection_it1",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_Informaticien && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_it2_lemanSoft",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_Informaticien && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_peintre2Alpineo",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_Peintre && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_peintre1Chromatik",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_Peintre && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_assc_1",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_Assistant_en_soins_et_sante_communautaire && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_assc_2",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_Assistant_en_soins_et_sante_communautaire && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_logisticien_1",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_de_Logisticien && _selectionTry != 3)"
+                },
+                {
+                    "key": "selection_logisticien_2",
+                    "version": "1.0",
+                    "condition": "(_goal == CFC_de_Logisticien && _selectionTry != 3)"
+                }
+            ]
+        },
+        "help_caractere": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "help_caractere_0",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_caractere_1",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_caractere_2",
+                    "version": "1.0",
+                    "condition": ""
+                }
+            ]
+        },
+        "help_competence": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "help_competence_0",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_competence_1",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_competence_2",
+                    "version": "1.0",
+                    "condition": ""
+                }
+            ]
+        },
+        "help_contexte": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "help_contexte_0",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_contexte_1",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_contexte_2",
+                    "version": "1.0",
+                    "condition": ""
+                }
+            ]
+        },
+        "help_experience": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "help_experience_0",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_experience_1",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_experience_2",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_experience_3",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_experience_4",
+                    "version": "1.0",
+                    "condition": ""
+                },
+                {
+                    "key": "help_experience_5",
+                    "version": "1.0",
+                    "condition": ""
+                }
+            ]
+        },
+
+        "help_validation": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "help_validation",
+                    "version": "1.0",
+                    "condition": ""
+                }
+            ]
+        },
+
+        "help_postulation": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "help_postulation",
+                    "version": "1.0",
+                    "condition": ""
+                }
+            ]
+        },
+
+        "help_sommet": {
+            "prerequisites": {
+                "condition": "",
+                "trophies": []
+            },
+            "scenarios": [
+                {
+                    "key": "help_sommet",
+                    "version": "1.0",
+                    "condition": ""
+                }
+            ]
+        }
+    }
+}

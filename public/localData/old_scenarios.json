@@ -1,0 +1,2569 @@
+{
+    "adventures": [
+        {
+            "id": "new",
+            "title": "🎓 Nouveau Diplômé",
+            "description": "Vous êtes un **jeune diplômé** à la recherche de votre premier emploi. Votre parcours peut prendre plusieurs directions prometteuses ! 🚀",
+            "image": null,
+            "traits": {
+                "Clarté de projet": [
+                    {
+                        "name": "Vision claire",
+                        "description": "Objectifs bien définis",
+                        "conditions": { "minStats": { "context": 2 } },
+                        "weight": 8
+                    },
+                    {
+                        "name": "En construction",
+                        "description": "Projet en cours de définition",
+                        "conditions": { "minStats": { "context": 1 }, "maxStats": { "context": 3 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "En exploration",
+                        "description": "Recherche de direction",
+                        "conditions": { "maxStats": { "context": 1 } },
+                        "weight": 4
+                    }
+                ],
+                "Sens de l'initiative": [
+                    {
+                        "name": "Proactif",
+                        "description": "Prend les devants naturellement",
+                        "conditions": { "minStats": { "character": 2 } },
+                        "weight": 8
+                    },
+                    {
+                        "name": "Motivé",
+                        "description": "Prêt à se lancer",
+                        "conditions": { "minStats": { "character": 1 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "Prudent",
+                        "description": "Préfère observer avant d'agir",
+                        "conditions": { "maxStats": { "character": 1 } },
+                        "weight": 4
+                    }
+                ],
+                "Niveau technique": [
+                    {
+                        "name": "Compétent",
+                        "description": "Bonnes bases techniques",
+                        "conditions": { "minStats": { "skills": 2 } },
+                        "weight": 8
+                    },
+                    {
+                        "name": "Débutant motivé",
+                        "description": "Prêt à apprendre",
+                        "conditions": { "minStats": { "skills": 1 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "Novice",
+                        "description": "Peu d'expérience technique",
+                        "conditions": { "maxStats": { "skills": 1 } },
+                        "weight": 4
+                    }
+                ]
+            },
+            "interests": [
+                {
+                    "name": "Aider les autres",
+                    "conditions": { "minStats": { "character": 1 } },
+                    "weight": 8
+                },
+                {
+                    "name": "Apprendre de nouvelles compétences",
+                    "conditions": { "minStats": { "skills": 1 } },
+                    "weight": 7
+                },
+                {
+                    "name": "Comprendre le monde professionnel",
+                    "conditions": { "minStats": { "context": 1 } },
+                    "weight": 6
+                },
+                {
+                    "name": "Gagner de l'expérience",
+                    "conditions": {},
+                    "weight": 9
+                }
+            ],
+            "goals": [
+                {
+                    "name": "Trouver un premier emploi stable",
+                    "conditions": { "minStats": { "context": 1 } },
+                    "weight": 10
+                },
+                {
+                    "name": "Développer mes compétences",
+                    "conditions": { "minStats": { "skills": 1 } },
+                    "weight": 8
+                },
+                {
+                    "name": "Me faire un réseau professionnel",
+                    "conditions": { "minStats": { "character": 1 } },
+                    "weight": 7
+                }
+            ],
+            "stages": {
+                "start": {
+                    "title": "🎓 Nouveau Diplômé",
+                    "description": "Félicitations ! 🎉 Vous venez de **terminer vos études** et cherchez votre premier emploi. Le monde professionnel s'ouvre devant vous avec **plusieurs stratégies** prometteuses à explorer.",
+                    "choices": [
+                        {
+                            "text": "Postuler aux grandes entreprises",
+                            "next": "big_companies",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "set",
+                                        "value": 1
+                                    }
+                                }
+                            },
+                            "statChanges": {
+                                "experience": 1,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Cibler les startups et PME",
+                            "next": "startups",
+                            "statChanges": {
+                                "skills": 1,
+                                "character": 1
+                            }
+                        },
+                        {
+                            "text": "Faire du bénévolat pour acquérir de l'expérience",
+                            "next": "volunteer_work",
+                            "statChanges": {
+                                "experience": 1,
+                                "character": 1
+                            }
+                        },
+                        {
+                            "text": "Chercher un stage ou alternance",
+                            "next": "internship_search",
+                            "statChanges": {
+                                "skills": 1,
+                                "experience": 1
+                            }
+                        }
+                    ]
+                },
+
+                "big_companies": {
+                    "title": "🏢 Candidature aux Grandes Entreprises",
+                    "description": "Vous envoyez votre CV aux **grandes entreprises**. Le processus est long et compétitif, mais offre de belles opportunités de carrière ! ⏰",
+                    "choices": [
+                        {
+                            "text": "Préparer minutieusement chaque entretien",
+                            "next": "interview_prep",
+                            "statChanges": {
+                                "skills": 1,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Multiplier les candidatures",
+                            "next": "mass_applications",
+                            "statChanges": {
+                                "experience": 1,
+                                "character": 1
+                            }
+                        },
+                        {
+                            "text": "Utiliser votre réseau (famille, amis, anciens professeurs)",
+                            "next": "personal_network",
+                            "condition": "character >= 1",
+                            "requirement": "Character ≥ 1",
+                            "statChanges": {
+                                "character": 1,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "startups": {
+                    "title": "🚀 Le Monde des Startups et PME",
+                    "description": "Les startups et PME offrent **plus de flexibilité** et un environnement humain, mais demandent de la **polyvalence**. Un bon terrain d'apprentissage ! 💪",
+                    "choices": [
+                        {
+                            "text": "Proposer de commencer par un stage",
+                            "next": "startup_internship",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 1
+                            }
+                        },
+                        {
+                            "text": "Montrer votre motivation et potentiel",
+                            "next": "motivation_focus",
+                            "statChanges": {
+                                "character": 1,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Participer aux événements locaux de networking",
+                            "next": "local_networking",
+                            "statChanges": {
+                                "character": 1,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "volunteer_work": {
+                    "title": "❤️ Expérience Bénévole",
+                    "description": "Le bénévolat vous permet d'acquérir de **l'expérience concrète** tout en aidant une cause qui vous tient à cœur. Un excellent moyen de se former ! ✨",
+                    "choices": [
+                        {
+                            "text": "Prendre des petites responsabilités",
+                            "next": "volunteer_responsibilities",
+                            "statChanges": {
+                                "character": 1,
+                                "experience": 1
+                            }
+                        },
+                        {
+                            "text": "Apprendre de nouvelles compétences",
+                            "next": "volunteer_skills",
+                            "statChanges": {
+                                "skills": 2,
+                                "experience": 1
+                            }
+                        },
+                        {
+                            "text": "Créer des liens avec les autres bénévoles",
+                            "next": "volunteer_network",
+                            "statChanges": {
+                                "character": 1,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "internship_search": {
+                    "title": "📚 Recherche de Stage",
+                    "description": "Vous cherchez un **stage ou une alternance** pour acquérir une première expérience professionnelle. C'est souvent la meilleure porte d'entrée ! 🚪",
+                    "choices": [
+                        {
+                            "text": "Cibler les entreprises qui forment bien",
+                            "next": "training_companies",
+                            "statChanges": {
+                                "skills": 1,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Accepter le premier stage proposé",
+                            "next": "first_internship",
+                            "statChanges": {
+                                "experience": 2
+                            }
+                        }
+                    ]
+                },
+
+                "interview_prep": {
+                    "title": "🎯 Préparation aux Entretiens",
+                    "description": "Votre préparation **sérieuse et méthodique** impressionne les recruteurs. Ils apprécient votre professionnalisme ! 👔",
+                    "choices": [
+                        {
+                            "text": "Décrocher un poste junior",
+                            "next": "junior_position",
+                            "condition": "skills >= 2",
+                            "requirement": "Skills ≥ 2",
+                            "statChanges": {
+                                "experience": 2,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Accepter un poste d'assistant",
+                            "next": "assistant_role",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 1
+                            }
+                        }
+                    ]
+                },
+
+                "mass_applications": {
+                    "title": "📊 Candidatures Multiples",
+                    "description": "Votre **persévérance** finit par payer ! Plusieurs entreprises vous contactent. La patience est récompensée ! 📈",
+                    "choices": [
+                        {
+                            "text": "Choisir l'entreprise qui semble la plus accueillante",
+                            "next": "welcoming_company",
+                            "statChanges": {
+                                "experience": 1,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Comparer plusieurs offres",
+                            "next": "compare_offers",
+                            "condition": "experience >= 2",
+                            "requirement": "Experience ≥ 2",
+                            "statChanges": {
+                                "character": 1,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "personal_network": {
+                    "title": "🤝 Réseau Personnel",
+                    "description": "Vos contacts personnels vous donnent des **conseils précieux** et quelques pistes intéressantes. Le réseau, même modeste, aide ! ✨",
+                    "choices": [
+                        {
+                            "text": "Suivre les conseils et pistes donnés",
+                            "next": "network_advice",
+                            "statChanges": {
+                                "experience": 1,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "startup_internship": {
+                    "title": "📈 Stage en Startup",
+                    "description": "Votre stage dans une startup vous fait découvrir **de nombreux aspects** du business. Une expérience enrichissante ! 🌟",
+                    "choices": [
+                        {
+                            "text": "Proposer de rester en CDI",
+                            "next": "startup_cdi",
+                            "condition": "skills >= 2 && character >= 2",
+                            "requirement": "Skills ≥ 2 et Character ≥ 2",
+                            "statChanges": {
+                                "experience": 2,
+                                "skills": 1
+                            }
+                        },
+                        {
+                            "text": "Utiliser cette expérience pour postuler ailleurs",
+                            "next": "experienced_candidate",
+                            "statChanges": {
+                                "experience": 2,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "motivation_focus": {
+                    "title": "💪 Mise en Avant de la Motivation",
+                    "description": "Votre **motivation sincère** et votre volonté d'apprendre touchent les recruteurs. Ils apprécient votre authenticité ! 🔥",
+                    "choices": [
+                        {
+                            "text": "Décrocher un poste d'assistant avec évolution",
+                            "next": "assistant_evolution",
+                            "statChanges": {
+                                "experience": 1,
+                                "character": 1
+                            }
+                        }
+                    ]
+                },
+
+                "local_networking": {
+                    "title": "🎪 Networking Local",
+                    "description": "Votre participation aux **événements locaux** vous fait découvrir l'écosystème professionnel de votre région ! 🌟",
+                    "choices": [
+                        {
+                            "text": "Rencontrer des entrepreneurs locaux",
+                            "next": "local_entrepreneurs",
+                            "statChanges": {
+                                "character": 1,
+                                "context": 2
+                            }
+                        }
+                    ]
+                },
+
+                "volunteer_responsibilities": {
+                    "title": "📋 Responsabilités Bénévoles",
+                    "description": "Vous prenez progressivement **des responsabilités** dans votre association. Cette expérience enrichit votre profil ! 💪",
+                    "choices": [
+                        {
+                            "text": "Utiliser cette expérience pour postuler",
+                            "next": "volunteer_experience_job",
+                            "statChanges": {
+                                "character": 1,
+                                "experience": 1
+                            }
+                        },
+                        {
+                            "text": "Continuer à développer vos responsabilités",
+                            "next": "volunteer_leadership",
+                            "condition": "character >= 3",
+                            "requirement": "Character ≥ 3",
+                            "statChanges": {
+                                "character": 2,
+                                "experience": 1
+                            }
+                        }
+                    ]
+                },
+
+                "volunteer_skills": {
+                    "title": "🛠️ Compétences Bénévoles",
+                    "description": "Vos **nouvelles compétences** acquises bénévolement complètent parfaitement votre formation théorique ! 🔥",
+                    "choices": [
+                        {
+                            "text": "Mettre en avant ces compétences pratiques",
+                            "next": "practical_skills_job",
+                            "statChanges": {
+                                "skills": 1,
+                                "experience": 1
+                            }
+                        }
+                    ]
+                },
+
+                "volunteer_network": {
+                    "title": "🌐 Réseau Bénévole",
+                    "description": "Vos **contacts bénévoles** vous donnent des conseils et vous présentent parfois des opportunités ! ❤️",
+                    "choices": [
+                        {
+                            "text": "Explorer les pistes données par le réseau",
+                            "next": "volunteer_network_job",
+                            "statChanges": {
+                                "experience": 1,
+                                "character": 1
+                            }
+                        }
+                    ]
+                },
+
+                "training_companies": {
+                    "title": "🎓 Entreprises Formatrices",
+                    "description": "Vous intégrez une entreprise **reconnue pour sa formation**. Un excellent tremplin pour votre carrière ! 🚀",
+                    "choices": [
+                        {
+                            "text": "Profiter pleinement de la formation",
+                            "next": "well_trained",
+                            "statChanges": {
+                                "skills": 2,
+                                "experience": 2,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "first_internship": {
+                    "title": "📝 Premier Stage",
+                    "description": "Votre **premier stage** vous fait découvrir le monde de l'entreprise. Chaque jour est un apprentissage ! 🌱",
+                    "choices": [
+                        {
+                            "text": "Proposer de rester dans l'entreprise",
+                            "next": "internship_to_job",
+                            "condition": "experience >= 3",
+                            "requirement": "Experience ≥ 3",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 1
+                            }
+                        },
+                        {
+                            "text": "Chercher autre chose avec cette expérience",
+                            "next": "post_internship_search",
+                            "statChanges": {
+                                "experience": 1,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+                "junior_position": {
+                    "title": "🎉 Poste Junior - Première Réussite",
+                    "description": "**Félicitations !** 👏 Vous décrochez votre **premier poste junior** dans une grande entreprise. Votre carrière commence sur de bonnes bases !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "assistant_role": {
+                    "title": "📋 Poste d'Assistant - Début Solide",
+                    "description": "**Bravo !** Vous commencez comme assistant et apprenez le métier progressivement. Une **base solide** pour évoluer !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "welcoming_company": {
+                    "title": "🏠 Entreprise Accueillante - Intégration Réussie",
+                    "description": "**Parfait !** Vous rejoignez une entreprise où l'**ambiance est excellente**. Vous vous épanouissez dans ce cadre bienveillant !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "compare_offers": {
+                    "title": "⚖️ Négociation Réussie - Choix Éclairé",
+                    "description": "**Excellent !** Votre capacité à **comparer les offres** vous permet de faire le meilleur choix pour votre carrière !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "network_advice": {
+                    "title": "🤝 Conseils Précieux - Voie Trouvée",
+                    "description": "**Merveilleux !** Les conseils de votre réseau vous mènent vers une **opportunité parfaite** pour débuter !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "startup_cdi": {
+                    "title": "🚀 CDI en Startup - Aventure Entrepreneuriale",
+                    "description": "**Génial !** Votre stage se transforme en CDI ! Vous devenez un **pilier de la startup** et apprenez tous les aspects du business !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "experienced_candidate": {
+                    "title": "🎖️ Candidat Expérimenté - Profil Valorisé",
+                    "description": "**Bravo !** Votre **expérience startup** vous distingue sur le marché et vous ouvre de nombreuses portes !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "assistant_evolution": {
+                    "title": "📈 Assistant en Évolution - Croissance Assurée",
+                    "description": "**Formidable !** Votre poste d'assistant avec **perspectives d'évolution** vous permet d'apprendre et de grandir professionnellement !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "local_entrepreneurs": {
+                    "title": "🌟 Réseau Entrepreneurial - Opportunités Locales",
+                    "description": "**Excellent !** Votre **réseau entrepreneurial local** vous ouvre des opportunités uniques dans votre région !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "volunteer_experience_job": {
+                    "title": "❤️ Expérience Bénévole Valorisée - Impact Social",
+                    "description": "**Inspirant !** Votre **expérience bénévole** convainc un employeur qui cherche quelqu'un avec vos valeurs !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "volunteer_leadership": {
+                    "title": "👑 Leadership Bénévole - Responsabilités Reconnues",
+                    "description": "**Exceptionnel !** Vos **responsabilités bénévoles** démontrent votre potentiel de leadership et vous ouvrent des postes à responsabilités !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "practical_skills_job": {
+                    "title": "🛠️ Compétences Pratiques - Savoir-Faire Reconnu",
+                    "description": "**Parfait !** Vos **compétences pratiques** acquises bénévolement complètent idéalement votre formation et vous démarquent !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "volunteer_network_job": {
+                    "title": "🌐 Réseau Bénévole - Recommandations Chaleureuses",
+                    "description": "**Touchant !** Votre **réseau bénévole** vous recommande avec enthousiasme et vous aide à trouver un poste qui vous correspond !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "well_trained": {
+                    "title": "🎓 Formation d'Excellence - Compétences Solides",
+                    "description": "**Remarquable !** Votre **formation d'excellence** vous donne toutes les clés pour réussir votre carrière professionnelle !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "internship_to_job": {
+                    "title": "🔄 Du Stage au CDI - Intégration Naturelle",
+                    "description": "**Magnifique !** Votre **intégration réussie** durant le stage convainc l'entreprise de vous garder en CDI !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "post_internship_search": {
+                    "title": "🚀 Recherche Post-Stage - Profil Renforcé",
+                    "description": "**Bravo !** Votre **expérience de stage** renforce considérablement votre profil et facilite votre recherche d'emploi !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "immigrant",
+            "title": "🌍 Nouvel Arrivant en Suisse Romande",
+            "description": "Vous êtes **nouvellement arrivé(e) en Suisse romande** et devez naviguer entre l'apprentissage du français, la reconnaissance de vos compétences et l'intégration dans le marché du travail suisse. Un nouveau départ plein d'opportunités ! 🏔️",
+            "image": null,
+            "traits": {
+                "Maîtrise du français": [
+                    {
+                        "name": "Français avancé",
+                        "description": "Excellente maîtrise de la langue",
+                        "conditions": { "minStats": { "context": 3 } },
+                        "weight": 10
+                    },
+                    {
+                        "name": "Français intermédiaire",
+                        "description": "Bonne base à améliorer",
+                        "conditions": { "minStats": { "context": 1 }, "maxStats": { "context": 2 } },
+                        "weight": 7
+                    },
+                    {
+                        "name": "Français débutant",
+                        "description": "Apprentissage en cours",
+                        "conditions": { "maxStats": { "context": 1 } },
+                        "weight": 5
+                    }
+                ],
+                "Adaptabilité culturelle": [
+                    {
+                        "name": "Caméléon culturel",
+                        "description": "S'adapte facilement aux nouveaux codes",
+                        "conditions": { "minStats": { "character": 2 } },
+                        "weight": 8
+                    },
+                    {
+                        "name": "En apprentissage",
+                        "description": "Découvre les codes suisses",
+                        "conditions": { "minStats": { "character": 1 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "Novice culturel",
+                        "description": "Tout est nouveau",
+                        "conditions": { "maxStats": { "character": 1 } },
+                        "weight": 4
+                    }
+                ],
+                "Reconnaissance professionnelle": [
+                    {
+                        "name": "Diplômes reconnus",
+                        "description": "Qualifications facilement transférables",
+                        "conditions": { "minStats": { "skills": 2, "experience": 1 } },
+                        "weight": 9
+                    },
+                    {
+                        "name": "En processus",
+                        "description": "Démarches de reconnaissance en cours",
+                        "conditions": { "minStats": { "skills": 1 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "À redéfinir",
+                        "description": "Besoin de formation complémentaire",
+                        "conditions": { "maxStats": { "skills": 1 } },
+                        "weight": 4
+                    }
+                ]
+            },
+            "interests": [
+                {
+                    "name": "Apprendre le français suisse",
+                    "conditions": { "maxStats": { "context": 2 } },
+                    "weight": 10
+                },
+                {
+                    "name": "Découvrir la culture suisse",
+                    "conditions": { "minStats": { "character": 1 } },
+                    "weight": 8
+                },
+                {
+                    "name": "Faire reconnaître mes compétences",
+                    "conditions": { "minStats": { "skills": 1 } },
+                    "weight": 9
+                },
+                {
+                    "name": "Créer un réseau professionnel",
+                    "conditions": {},
+                    "weight": 8
+                },
+                {
+                    "name": "Aider d'autres nouveaux arrivants",
+                    "conditions": { "minStats": { "experience": 1 } },
+                    "weight": 7
+                }
+            ],
+            "goals": [
+                {
+                    "name": "Obtenir un emploi dans mon domaine",
+                    "conditions": { "minStats": { "skills": 2 } },
+                    "weight": 10
+                },
+                {
+                    "name": "M'intégrer professionnellement en Suisse",
+                    "conditions": { "minStats": { "context": 1 } },
+                    "weight": 9
+                },
+                {
+                    "name": "Développer mon réseau professionnel suisse",
+                    "conditions": { "minStats": { "character": 1 } },
+                    "weight": 8
+                }
+            ],
+            "stages": {
+                "start": {
+                    "title": "🌍 Arrivée en Suisse Romande",
+                    "description": "Vous venez d'arriver en **Suisse romande** ! 🏔️ Entre l'apprentissage du français, la compréhension du système suisse et la recherche d'emploi, plusieurs **étapes importantes** vous attendent pour réussir votre intégration.",
+                    "choices": [
+                        {
+                            "text": "Commencer par des cours de français intensifs",
+                            "next": "french_courses",
+                            "statChanges": {
+                                "context": 2,
+                                "character": 1
+                            }
+                        },
+                        {
+                            "text": "Chercher directement du travail",
+                            "next": "direct_job_search",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 1
+                            }
+                        },
+                        {
+                            "text": "Faire un stage d'intégration professionnelle",
+                            "next": "integration_program",
+                            "statChanges": {
+                                "context": 1,
+                                "experience": 1,
+                                "character": 1
+                            }
+                        },
+                        {
+                            "text": "Faire reconnaître mes diplômes d'abord",
+                            "next": "diploma_recognition",
+                            "statChanges": {
+                                "skills": 2,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "french_courses": {
+                    "title": "📚 Cours de Français Intensifs",
+                    "description": "Vous vous inscrivez à des **cours de français intensifs** pour maîtriser la langue et comprendre les spécificités suisses. Un investissement essentiel ! 🗣️",
+                    "choices": [
+                        {
+                            "text": "Compléter avec des cours de culture suisse",
+                            "next": "cultural_integration",
+                            "statChanges": {
+                                "context": 2,
+                                "character": 1
+                            }
+                        },
+                        {
+                            "text": "Chercher un travail avec ce niveau de français",
+                            "next": "job_with_french",
+                            "condition": "context >= 3",
+                            "requirement": "Context ≥ 3",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 1
+                            }
+                        },
+                        {
+                            "text": "Faire du bénévolat pour pratiquer",
+                            "next": "volunteer_practice",
+                            "statChanges": {
+                                "character": 1,
+                                "context": 1,
+                                "experience": 1
+                            }
+                        }
+                    ]
+                },
+
+                "direct_job_search": {
+                    "title": "🔍 Recherche d'Emploi Directe",
+                    "description": "Vous vous lancez **directement dans la recherche d'emploi**. C'est plus difficile sans maîtriser parfaitement le français, mais votre motivation impressionne ! 💪",
+                    "choices": [
+                        {
+                            "text": "Cibler les entreprises internationales",
+                            "next": "international_companies",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 1
+                            }
+                        },
+                        {
+                            "text": "Accepter un emploi moins qualifié temporairement",
+                            "next": "survival_job",
+                            "statChanges": {
+                                "experience": 2,
+                                "character": 1
+                            }
+                        },
+                        {
+                            "text": "Finalement prendre des cours de français",
+                            "next": "delayed_french_learning",
+                            "statChanges": {
+                                "context": 1,
+                                "experience": 1
+                            }
+                        }
+                    ]
+                },
+
+                "integration_program": {
+                    "title": "🎯 Programme d'Intégration",
+                    "description": "Vous participez à un **programme d'intégration professionnelle**. C'est le parcours idéal pour comprendre le marché du travail suisse ! ✨",
+                    "choices": [
+                        {
+                            "text": "Excellentes dans le programme",
+                            "next": "program_success",
+                            "condition": "character >= 2",
+                            "requirement": "Character ≥ 2",
+                            "statChanges": {
+                                "context": 2,
+                                "experience": 2,
+                                "skills": 1
+                            }
+                        },
+                        {
+                            "text": "Décrocher un stage grâce au programme",
+                            "next": "program_internship",
+                            "statChanges": {
+                                "experience": 2,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "diploma_recognition": {
+                    "title": "🎓 Reconnaissance de Diplômes",
+                    "description": "Vous entamez les **démarches de reconnaissance** de vos diplômes. Un processus long mais crucial pour valoriser votre formation ! 📋",
+                    "choices": [
+                        {
+                            "text": "Diplômes entièrement reconnus",
+                            "next": "full_recognition",
+                            "condition": "skills >= 3",
+                            "requirement": "Skills ≥ 3",
+                            "statChanges": {
+                                "skills": 2,
+                                "context": 1,
+                                "experience": 1
+                            }
+                        },
+                        {
+                            "text": "Reconnaissance partielle - formation complémentaire",
+                            "next": "partial_recognition",
+                            "statChanges": {
+                                "skills": 1,
+                                "context": 2
+                            }
+                        },
+                        {
+                            "text": "Pas de reconnaissance - se réorienter",
+                            "next": "career_change",
+                            "statChanges": {
+                                "character": 2,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "cultural_integration": {
+                    "title": "🇨🇭 Intégration Culturelle Réussie",
+                    "description": "Votre **parfaite maîtrise du français** et votre compréhension de la culture suisse vous ouvrent de nombreuses portes ! 🌟",
+                    "choices": [
+                        {
+                            "text": "Postuler dans la fonction publique",
+                            "next": "public_sector",
+                            "statChanges": {
+                                "experience": 2,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Travailler dans le secteur privé",
+                            "next": "private_sector_integrated",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 2
+                            }
+                        }
+                    ]
+                },
+
+                "job_with_french": {
+                    "title": "💼 Emploi avec Bon Français",
+                    "description": "Votre **niveau de français solide** vous permet de décrocher un emploi intéressant ! Les employeurs apprécient votre investissement ! 📈",
+                    "choices": [
+                        {
+                            "text": "Exceller dans ce poste",
+                            "next": "french_success",
+                            "statChanges": {
+                                "experience": 2,
+                                "skills": 1,
+                                "character": 1
+                            }
+                        }
+                    ]
+                },
+
+                "volunteer_practice": {
+                    "title": "❤️ Bénévolat et Pratique",
+                    "description": "Le **bénévolat** vous permet de pratiquer le français dans un contexte bienveillant tout en aidant la communauté ! 🤝",
+                    "choices": [
+                        {
+                            "text": "Utiliser ces contacts pour trouver du travail",
+                            "next": "volunteer_network_job",
+                            "statChanges": {
+                                "character": 1,
+                                "experience": 1
+                            }
+                        },
+                        {
+                            "text": "Devenir coordinateur bénévole",
+                            "next": "volunteer_coordinator",
+                            "condition": "character >= 3",
+                            "requirement": "Character ≥ 3",
+                            "statChanges": {
+                                "character": 2,
+                                "experience": 2
+                            }
+                        }
+                    ]
+                },
+
+                "international_companies": {
+                    "title": "🌐 Entreprises Internationales",
+                    "description": "Votre **profil international** séduit les entreprises multinationales présentes en Suisse ! 🚀",
+                    "choices": [
+                        {
+                            "text": "Décrocher un poste dans votre domaine",
+                            "next": "international_career",
+                            "condition": "skills >= 2",
+                            "requirement": "Skills ≥ 2",
+                            "statChanges": {
+                                "experience": 2,
+                                "skills": 2,
+                                "context": 1
+                            }
+                        },
+                        {
+                            "text": "Commencer par un poste junior",
+                            "next": "international_junior",
+                            "statChanges": {
+                                "experience": 1,
+                                "skills": 1,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "survival_job": {
+                    "title": "🛠️ Emploi de Survie",
+                    "description": "Vous acceptez un **emploi moins qualifié** temporairement. Cette expérience vous apprend beaucoup sur le monde du travail suisse ! 💪",
+                    "choices": [
+                        {
+                            "text": "Utiliser cette expérience pour évoluer",
+                            "next": "survival_to_career",
+                            "condition": "experience >= 3",
+                            "requirement": "Experience ≥ 3",
+                            "statChanges": {
+                                "skills": 1,
+                                "context": 2
+                            }
+                        },
+                        {
+                            "text": "Reprendre des études/formations",
+                            "next": "back_to_training",
+                            "statChanges": {
+                                "skills": 2,
+                                "context": 1
+                            }
+                        }
+                    ]
+                },
+
+                "delayed_french_learning": {
+                    "title": "📖 Apprentissage du Français Différé",
+                    "description": "Vous réalisez l'**importance cruciale du français** et vous y mettez sérieusement ! Mieux vaut tard que jamais ! 🎯",
+                    "choices": [
+                        {
+                            "text": "Rattraper rapidement le niveau",
+                            "next": "french_catch_up",
+                            "statChanges": {
+                                "context": 2,
+                                "character": 1
+                            }
+                        }
+                    ]
+                },
+                "program_success": {
+                    "title": "🏆 Succès du Programme - Intégration Exemplaire",
+                    "description": "**Extraordinaire !** 🎊 Vous êtes un **modèle de réussite** du programme d'intégration ! Les organismes vous recommandent chaleureusement !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "program_internship": {
+                    "title": "📋 Stage d'Intégration - Tremplin Professionnel",
+                    "description": "**Parfait !** Votre **stage d'intégration** se transforme en véritable tremplin vers l'emploi stable en Suisse !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "full_recognition": {
+                    "title": "🎓 Reconnaissance Complète - Qualifications Validées",
+                    "description": "**Magnifique !** Vos **diplômes sont entièrement reconnus** ! Vous pouvez exercer votre métier avec toutes vos qualifications !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "partial_recognition": {
+                    "title": "📚 Formation Complémentaire - Adaptation Réussie",
+                    "description": "**Bravo !** Votre **formation complémentaire** vous permet d'adapter parfaitement vos compétences au marché suisse !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "career_change": {
+                    "title": "🔄 Reconversion Réussie - Nouveau Départ",
+                    "description": "**Courageux !** Votre **reconversion professionnelle** vous ouvre de nouvelles perspectives passionnantes en Suisse !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "public_sector": {
+                    "title": "🏛️ Fonction Publique - Service à la Communauté",
+                    "description": "**Admirable !** Vous intégrez la **fonction publique suisse** et contribuez au bien-être de votre nouvelle communauté !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "private_sector_integrated": {
+                    "title": "🏢 Secteur Privé - Intégration Complète",
+                    "description": "**Excellent !** Votre **intégration parfaite** dans le secteur privé suisse couronne vos efforts d'adaptation !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "french_success": {
+                    "title": "🗣️ Maîtrise du Français - Communication Parfaite",
+                    "description": "**Remarquable !** Votre **excellent français** devient un atout majeur et vous ouvre toutes les portes professionnelles !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "volunteer_network_job": {
+                    "title": "🤝 Réseau Bénévole - Solidarité Payante",
+                    "description": "**Touchant !** Votre **engagement bénévole** vous fait découvrir des opportunités d'emploi grâce à votre nouveau réseau !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "volunteer_coordinator": {
+                    "title": "👑 Coordinateur Bénévole - Leadership Communautaire",
+                    "description": "**Inspirant !** Votre **leadership naturel** fait de vous un coordinateur bénévole respecté, facilitant l'intégration d'autres nouveaux arrivants !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "international_career": {
+                    "title": "🌟 Carrière Internationale - Expertise Reconnue",
+                    "description": "**Extraordinaire !** Votre **profil international** devient un atout majeur dans l'écosystème économique suisse !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "international_junior": {
+                    "title": "🚀 Junior International - Évolution Assurée",
+                    "description": "**Prometteur !** Votre **poste junior** dans une entreprise internationale vous promet une belle évolution de carrière !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "survival_to_career": {
+                    "title": "📈 De la Survie à la Carrière - Ascension Méritée",
+                    "description": "**Admirable !** Votre **parcours depuis un emploi de survie** vers une vraie carrière inspire respect et admiration !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "back_to_training": {
+                    "title": "🎓 Retour en Formation - Investissement Payant",
+                    "description": "**Sage !** Votre **retour stratégique en formation** vous permet de vous repositionner parfaitement sur le marché suisse !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "french_catch_up": {
+                    "title": "🎯 Rattrapage Linguistique - Détermination Payante",
+                    "description": "**Bravo !** Votre **rattrapage intensif en français** transforme complètement vos perspectives professionnelles en Suisse !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "workplace_integration",
+            "title": "🍷 Intégration en Entreprise",
+            "description": "Vous venez d'**intégrer une nouvelle entreprise** et participez à vos premiers événements sociaux. Entre les codes culturels, les collègues et les situations sociales, naviguer dans cet environnement demande de la finesse ! 🏢",
+            "image": null,
+            "traits": {
+                "Aisance sociale": [
+                    {
+                        "name": "Sociable naturel",
+                        "description": "À l'aise dans les interactions sociales",
+                        "conditions": { "minStats": { "character": 2 } },
+                        "weight": 8
+                    },
+                    {
+                        "name": "Timide mais ouvert",
+                        "description": "Réservé mais prêt à participer",
+                        "conditions": { "minStats": { "character": 1 }, "maxStats": { "character": 2 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "Introverti",
+                        "description": "Préfère observer et écouter",
+                        "conditions": { "maxStats": { "character": 1 } },
+                        "weight": 4
+                    }
+                ],
+                "Compréhension culturelle": [
+                    {
+                        "name": "Fin observateur",
+                        "description": "Comprend rapidement les codes",
+                        "conditions": { "minStats": { "context": 2 } },
+                        "weight": 8
+                    },
+                    {
+                        "name": "En apprentissage",
+                        "description": "Découvre les usages de l'entreprise",
+                        "conditions": { "minStats": { "context": 1 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "Débutant",
+                        "description": "Tout est nouveau",
+                        "conditions": { "maxStats": { "context": 1 } },
+                        "weight": 4
+                    }
+                ],
+                "Gestion des situations délicates": [
+                    {
+                        "name": "Diplomatique",
+                        "description": "Sait naviguer avec tact",
+                        "conditions": { "minStats": { "skills": 2 } },
+                        "weight": 8
+                    },
+                    {
+                        "name": "Prudent",
+                        "description": "Évite les erreurs majeures",
+                        "conditions": { "minStats": { "skills": 1 } },
+                        "weight": 6
+                    },
+                    {
+                        "name": "Direct",
+                        "description": "Dit ce qu'il pense",
+                        "conditions": { "maxStats": { "skills": 1 } },
+                        "weight": 4
+                    }
+                ]
+            },
+            "interests": [
+                {
+                    "name": "Comprendre la culture d'entreprise",
+                    "conditions": { "minStats": { "context": 1 } },
+                    "weight": 8
+                },
+                {
+                    "name": "Créer des liens avec les collègues",
+                    "conditions": { "minStats": { "character": 1 } },
+                    "weight": 9
+                },
+                {
+                    "name": "Naviguer dans les situations sociales",
+                    "conditions": { "minStats": { "skills": 1 } },
+                    "weight": 7
+                },
+                {
+                    "name": "M'intégrer naturellement dans l'équipe",
+                    "conditions": {},
+                    "weight": 10
+                }
+            ],
+            "goals": [
+                {
+                    "name": "Être accepté par mes collègues",
+                    "conditions": { "minStats": { "character": 1 } },
+                    "weight": 10
+                },
+                {
+                    "name": "Comprendre les codes non-écrits",
+                    "conditions": { "minStats": { "context": 1 } },
+                    "weight": 8
+                },
+                {
+                    "name": "Éviter les malentendus culturels",
+                    "conditions": { "minStats": { "skills": 1 } },
+                    "weight": 7
+                }
+            ],
+            "stages": {
+                "start": {
+                    "title": "🍷 Événement d'Entreprise - Salle de Pause",
+                    "description": "C'est votre **première semaine** dans l'entreprise ! 🎉 Vous arrivez dans la **salle de pause** où vos collègues organisent un petit événement convivial. Du vin est servi, l'atmosphère est détendue. Comment allez-vous naviguer dans cette situation sociale ?",
+                    "choices": [
+                        {
+                            "text": "Me mêler naturellement à la conversation",
+                            "next": "natural_social",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Rester en retrait et observer d'abord",
+                            "next": "observe_first",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "M'asseoir seul à une table",
+                            "next": "sit_alone",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "natural_social": {
+                    "title": "💬 Participation Active",
+                    "description": "Vous vous **intégrez naturellement** dans les conversations ! Vos collègues apprécient votre ouverture et commencent à vous poser des questions sur votre parcours. 🤝",
+                    "choices": [
+                        {
+                            "text": "Partager des anecdotes personnelles",
+                            "next": "personal_stories",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Poser des questions sur l'entreprise",
+                            "next": "company_questions",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Accepter le verre qu'on me propose",
+                            "next": "accept_drink",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "observe_first": {
+                    "title": "👀 Observation Stratégique",
+                    "description": "Votre **approche prudente** vous permet de bien comprendre l'ambiance et les dynamiques entre collègues. C'est une stratégie sage pour un nouvel arrivant ! 🎯",
+                    "choices": [
+                        {
+                            "text": "Identifier qui sont les personnes clés",
+                            "next": "identify_key_people",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Comprendre les sujets de conversation privilégiés",
+                            "next": "conversation_topics",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Attendre qu'on vienne me parler",
+                            "next": "wait_approach",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "sit_alone": {
+                    "title": "😔 Solitude Initiale",
+                    "description": "Vous vous sentez un peu **seul et gêné** par cette situation sociale. C'est normal pour un premier événement ! Un collègue bienveillant remarque votre isolement. 💭",
+                    "choices": [
+                        {
+                            "text": "Accepter quand quelqu'un vient me parler",
+                            "next": "colleague_approach",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Partir discrètement",
+                            "next": "leave_early",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "personal_stories": {
+                    "title": "📖 Partage Personnel",
+                    "description": "Vos **anecdotes personnelles** créent une atmosphère chaleureuse et vos collègues commencent à mieux vous connaître. L'authenticité paie ! ✨",
+                    "choices": [
+                        {
+                            "text": "Continuer sur cette lancée conviviale",
+                            "next": "convivial_success",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Recentrer sur le travail",
+                            "next": "work_focus",
+                            "condition": "skills >= 2",
+                            "requirement": "Skills ≥ 2",
+                            "changes": {
+                                "stats": {
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "company_questions": {
+                    "title": "❓ Curiosité Professionnelle",
+                    "description": "Vos **questions pertinentes** sur l'entreprise montrent votre intérêt sincère. Vos collègues apprécient votre approche professionnelle ! 🏢",
+                    "choices": [
+                        {
+                            "text": "Approfondir sur les projets en cours",
+                            "next": "project_discussions",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "S'intéresser à la culture d'équipe",
+                            "next": "team_culture",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "accept_drink": {
+                    "title": "🍷 Participation aux Usages",
+                    "description": "Vous **acceptez le verre** proposé et participez ainsi pleinement à l'usage social de l'entreprise. L'ambiance devient plus détendue ! 🎉",
+                    "choices": [
+                        {
+                            "text": "Boire modérément et rester professionnel",
+                            "next": "moderate_drinking",
+                            "condition": "skills >= 1",
+                            "requirement": "Skills ≥ 1",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Expliquer que je ne bois pas habituellement",
+                            "next": "explain_no_drink",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Me laisser emporter par l'ambiance",
+                            "next": "carried_away",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "identify_key_people": {
+                    "title": "🎯 Analyse Sociale",
+                    "description": "Votre **observation attentive** vous permet d'identifier les **personnes influentes** et les dynamiques de pouvoir dans l'équipe. Information précieuse ! 🔍",
+                    "choices": [
+                        {
+                            "text": "Approcher subtilement les personnes clés",
+                            "next": "strategic_networking",
+                            "condition": "character >= 2",
+                            "requirement": "Character ≥ 2",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Continuer l'observation sans agir",
+                            "next": "continued_observation",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "conversation_topics": {
+                    "title": "🗣️ Codes Conversationnels",
+                    "description": "Vous **décryptez rapidement** les sujets favoris de l'équipe et les tabous à éviter. Cette compréhension culturelle est un atout majeur ! 🧠",
+                    "choices": [
+                        {
+                            "text": "Rejoindre une conversation sur un sujet sûr",
+                            "next": "safe_conversation",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Lancer un nouveau sujet d'intérêt général",
+                            "next": "new_topic",
+                            "condition": "character >= 1",
+                            "requirement": "Character ≥ 1",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "wait_approach": {
+                    "title": "⏳ Patience Sociale",
+                    "description": "Vous **attendez patiemment** qu'on vienne vers vous. Cette approche non-intrusive est respectée, et bientôt quelqu'un vous aborde naturellement ! 🤗",
+                    "choices": [
+                        {
+                            "text": "Répondre chaleureusement à l'approche",
+                            "next": "warm_response",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "colleague_approach": {
+                    "title": "🤝 Bienveillance Collégiale",
+                    "description": "Un **collègue bienveillant** vous rejoint et engage la conversation. Cette première interaction positive peut changer toute la dynamique ! 😊",
+                    "choices": [
+                        {
+                            "text": "Saisir cette opportunité pour m'intégrer",
+                            "next": "integration_opportunity",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Rester poli mais réservé",
+                            "next": "polite_reserved",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "leave_early": {
+                    "title": "🚪 Départ Discret",
+                    "description": "Vous **partez discrètement**, préférant éviter la situation sociale. Ce n'est pas idéal pour l'intégration, mais parfois c'est nécessaire de respecter ses limites. 😔",
+                    "choices": [
+                        {
+                            "text": "Réfléchir à une meilleure stratégie pour la prochaine fois",
+                            "next": "learn_from_experience",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "convivial_success": {
+                    "title": "🎉 Intégration Conviviale Réussie",
+                    "description": "**Formidable !** Votre **authenticité et votre chaleur humaine** font de vous un nouveau collègue apprécié de tous. Vous êtes parfaitement intégré ! 🌟",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "work_focus": {
+                    "title": "💼 Équilibre Professionnel - Transition Habile",
+                    "description": "**Excellent !** Votre capacité à **naviguer entre personnel et professionnel** démontre votre maturité et votre intelligence sociale !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "project_discussions": {
+                    "title": "🚀 Expert Engagé - Discussions Projets",
+                    "description": "**Remarquable !** Vos **questions pointues sur les projets** révèlent votre expertise et votre engagement professionnel !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "team_culture": {
+                    "title": "🤝 Ambassadeur d'Équipe - Culture Assimilée",
+                    "description": "**Inspirant !** Votre **intérêt sincère pour la culture d'équipe** fait de vous rapidement un ambassadeur naturel de l'esprit collectif !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "moderate_drinking": {
+                    "title": "🎯 Modération Professionnelle - Équilibre Parfait",
+                    "description": "**Parfait !** Votre **gestion équilibrée** de la situation sociale démontre votre maturité et votre intelligence relationnelle !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "explain_no_drink": {
+                    "title": "💭 Authenticité Respectée - Choix Assumé",
+                    "description": "**Respectable !** Votre **authenticité et vos principes** sont respectés par l'équipe. Vous prouvez qu'on peut s'intégrer en restant soi-même !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "carried_away": {
+                    "title": "🎪 Spontanéité Appréciée - Ambiance Festive",
+                    "description": "**Amusant !** Votre **spontanéité** crée une ambiance festive appréciée, même si c'était un peu risqué ! Vous êtes maintenant 'celui qui anime' !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "strategic_networking": {
+                    "title": "🎖️ Networking Stratégique - Relations Clés",
+                    "description": "**Brillant !** Votre **approche stratégique** vous permet de tisser rapidement des **relations clés** dans l'organisation !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "continued_observation": {
+                    "title": "🔍 Analyste Social - Compréhension Fine",
+                    "description": "**Sage !** Votre **observation continue** vous donne une **compréhension fine** des dynamiques d'équipe. Un atout précieux !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "safe_conversation": {
+                    "title": "💬 Communication Sûre - Intégration Réussie",
+                    "description": "**Intelligent !** Votre **choix judicieux de sujets** facilite une intégration naturelle et sans fausse note !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "new_topic": {
+                    "title": "💡 Initiateur Social - Leadership Naturel",
+                    "description": "**Excellent !** Votre **capacité à lancer de nouveaux sujets** révèle un leadership social naturel très apprécié !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "warm_response": {
+                    "title": "😊 Réponse Chaleureuse - Sympathie Immédiate",
+                    "description": "**Touchant !** Votre **réponse chaleureuse** crée immédiatement une **sympathie mutuelle** avec vos nouveaux collègues !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "integration_opportunity": {
+                    "title": "🚀 Opportunité Saisie - Intégration Accélérée",
+                    "description": "**Formidable !** Vous **saisissez parfaitement cette opportunité** et transformez un moment difficile en succès d'intégration !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "polite_reserved": {
+                    "title": "🤝 Politesse Respectée - Intégration Progressive",
+                    "description": "**Respectable !** Votre **approche polie mais réservée** est respectée et permet une intégration progressive à votre rythme !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "learn_from_experience": {
+                    "title": "📚 Apprentissage Constructif - Croissance Personnelle",
+                    "description": "**Sage !** Votre **réflexion constructive** sur cette expérience vous prépare mieux pour les futures interactions sociales !",
+                    "isEnd": true,
+                    "isSuccess": false,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "workplace",
+            "title": "🍷 Intégration en Entreprise",
+            "description": "Vous venez d'**intégrer une nouvelle entreprise** et participez à vos premiers événements sociaux. Entre les codes culturels, les collègues et les situations sociales, naviguer dans cet environnement demande de la finesse ! 🏢",
+            "image": null,
+            "stages": {
+                "start": {
+                    "title": "🍷 Arrivée Salle de Pause",
+                    "description": "Vous **arrivez à la salle de pause**. Du vin est servi pour un événement convivial de l'entreprise. L'atmosphère est détendue mais vous ne connaissez personne encore. 😔",
+                    "choices": [
+                        {
+                            "text": "Tu ne parles à personne, ça te gêne",
+                            "next": "feeling_alone",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Tu t'assieds à la table",
+                            "next": "sit_at_table",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "feeling_alone": {
+                    "title": "😔 Tu te sens seul",
+                    "description": "Tu te sens seul, FOMO. L'envie de participer grandit mais tu hésites encore à faire le premier pas.",
+                    "choices": [
+                        {
+                            "text": "Tu t'assieds à la table",
+                            "next": "sit_at_table",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "sub",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "sit_at_table": {
+                    "title": "🍷 On te propose un verre",
+                    "description": "Quelqu'un te propose un verre. C'est un moment décisif pour ton intégration dans l'équipe.",
+                    "choices": [
+                        {
+                            "text": "Tu dis que tu ne bois pas",
+                            "next": "why_no_drink",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Tu acceptes le verre",
+                            "next": "take_glass",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "set",
+                                        "value": 1
+                                    },
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Tu dis que ça ne se fait pas dans ta culture",
+                            "next": "cultural_excuse",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "why_no_drink": {
+                    "title": "❓ On te demande pourquoi",
+                    "description": "On te demande pourquoi tu refuses. Tes collègues semblent curieux de connaître tes raisons.",
+                    "choices": [
+                        {
+                            "text": "Tu dis que ça ne se fait pas dans ta culture",
+                            "next": "cultural_excuse",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Tu inventes un mensonge",
+                            "next": "lie_excuse",
+                            "changes": {
+                                "stats": {
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "cultural_excuse": {
+                    "title": "🌍 Tu inventes un mensonge",
+                    "description": "Tu inventes un mensonge sur ta culture. Tes collègues acquiescent poliment mais l'atmosphère devient un peu tendue.",
+                    "choices": [
+                        {
+                            "text": "Continuer la conversation malgré tout",
+                            "next": "awkward_conversation",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "lie_excuse": {
+                    "title": "🤥 Excuse inventée",
+                    "description": "Tu inventes une excuse. Tes collègues n'insistent pas mais tu sens que cela crée une certaine distance.",
+                    "choices": [
+                        {
+                            "text": "Essayer de rattraper l'atmosphère",
+                            "next": "try_recover",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "take_glass": {
+                    "title": "🍷 Tu prends un verre",
+                    "description": "Tu prends un verre. L'ambiance se détend et tes collègues t'incluent naturellement dans leurs conversations.",
+                    "choices": [
+                        {
+                            "text": "Tu fais semblant de boire",
+                            "next": "pretend_drink",
+                            "changes": {
+                                "stats": {
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Tu bois sans réfléchir",
+                            "next": "drink_mindless",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "pretend_drink": {
+                    "title": "🎭 Ça ouvre de belles discussions",
+                    "description": "Ça ouvre de belles discussions. En faisant semblant de boire, tu participes à l'ambiance tout en gardant le contrôle.",
+                    "choices": [
+                        {
+                            "text": "Continuer cette stratégie",
+                            "next": "strategic_success",
+                            "changes": {
+                                "stats": {
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "drink_mindless": {
+                    "title": "🎉 L'ambiance monte",
+                    "description": "L'ambiance monte. Tu commences à te sentir plus détendu mais aussi un peu étourdi.",
+                    "choices": [
+                        {
+                            "text": "Tu continues",
+                            "next": "getting_tipsy",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Tu ralentis",
+                            "next": "slow_down",
+                            "changes": {
+                                "stats": {
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "getting_tipsy": {
+                    "title": "🍷 Tu te sens pompette",
+                    "description": "Tu commences à te sentir pompette. Tes collègues te demandent si c'est la première fois que tu participes à ce genre d'événement.",
+                    "choices": [
+                        {
+                            "text": "Oui",
+                            "next": "first_time_reaction",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "Non, j'ai l'habitude",
+                            "next": "experienced_claim",
+                            "changes": {
+                                "stats": {
+                                    "experience": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "first_time_reaction": {
+                    "title": "😊 Bonne réaction",
+                    "description": "Ça ouvre de belles discussions. Tes collègues apprécient ton honnêteté et arrêtent de te servir, veillant sur toi.",
+                    "choices": [
+                        {
+                            "text": "Apprécier leur bienveillance",
+                            "next": "colleague_care_success",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 2
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "experienced_claim": {
+                    "title": "😵 Ça tourne mal",
+                    "description": "Ça commence à tourner, la journée se finit mal. Tu as voulu faire bonne impression mais c'est l'effet inverse.",
+                    "choices": [
+                        {
+                            "text": "Apprendre de cette erreur",
+                            "next": "learn_from_mistake",
+                            "changes": {
+                                "stats": {
+                                    "context": {
+                                        "type": "add",
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "slow_down": {
+                    "title": "🎯 Modération réussie",
+                    "description": "Tu ralentis et gères bien la situation. Tes collègues respectent ton approche équilibrée.",
+                    "choices": [
+                        {
+                            "text": "Profiter de cette intégration réussie",
+                            "next": "balanced_integration",
+                            "changes": {
+                                "stats": {
+                                    "character": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "skills": {
+                                        "type": "add",
+                                        "value": 1
+                                    },
+                                    "context": {
+                                        "type": "add",
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                "strategic_success": {
+                    "title": "🎖️ Intégration Stratégique Réussie",
+                    "description": "**Brillant !** Votre **approche stratégique** vous permet de participer à l'événement tout en gardant le contrôle. Respect ! 🌟",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "colleague_care_success": {
+                    "title": "🤝 Bienveillance Collégiale - Intégration Chaleureuse",
+                    "description": "**Touchant !** Votre **honnêteté** génère une véritable bienveillance de l'équipe. Vous êtes adopté ! ❤️",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "balanced_integration": {
+                    "title": "⚖️ Intégration Équilibrée - Maturité Appréciée",
+                    "description": "**Parfait !** Votre **gestion équilibrée** de la situation impressionne vos collègues par votre maturité ! 🎯",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "awkward_conversation": {
+                    "title": "😅 Conversation Tendue - Rattrapage Partiel",
+                    "description": "**Correct.** Malgré le **moment tendu**, vous réussissez à maintenir le dialogue et à vous intégrer progressivement.",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "try_recover": {
+                    "title": "🚀 Récupération Sociale - Effort Apprécié",
+                    "description": "**Bien !** Votre **effort pour rattraper** l'atmosphère montre votre volonté d'intégration et finit par porter ses fruits !",
+                    "isEnd": true,
+                    "isSuccess": true,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                },
+
+                "learn_from_mistake": {
+                    "title": "📚 Leçon Apprise - Expérience Formatrice",
+                    "description": "**Sage.** Cette **expérience difficile** vous apprend beaucoup sur les codes de l'entreprise pour la prochaine fois.",
+                    "isEnd": true,
+                    "isSuccess": false,
+                    "choices": [
+                        {
+                            "text": "Recommencer un nouveau parcours",
+                            "next": "end"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
